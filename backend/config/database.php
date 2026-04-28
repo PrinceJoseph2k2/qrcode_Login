@@ -1,4 +1,5 @@
 <?php
+// File: backend/config/database.php
 class Database {
     private $host = 'localhost';
     private $db_name = 'meridian_college';
@@ -17,6 +18,7 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         } catch(PDOException $e) {
+            // Return error as JSON instead of echoing
             http_response_code(500);
             echo json_encode(['success' => false, 'message' => 'Database connection failed']);
             exit();

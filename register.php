@@ -1,6 +1,5 @@
 <?php
 session_start();
-// If already logged in, redirect to dashboard
 if (isset($_SESSION['user_id'])) {
     header('Location: dashboard.php');
     exit();
@@ -9,277 +8,270 @@ if (isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Register - Meridian College Portal</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        min-height: 100vh;
-        background: linear-gradient(135deg, #0d1b3e 0%, #1e2f5c 100%);
-        font-family: 'Outfit', sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-    }
-    
-    .register-container {
-        max-width: 500px;
-        width: 100%;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        overflow: hidden;
-        animation: slideUp 0.5s ease;
-    }
-    
-    @keyframes slideUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Meridian College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1b3e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
-    }
-    
-    .register-header {
-        background: #0d1b3e;
-        color: white;
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    .register-header h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 28px;
-        margin-bottom: 0.5rem;
-    }
-    
-    .register-header p {
-        color: rgba(255,255,255,0.7);
-        font-size: 14px;
-    }
-    
-    .register-body {
-        padding: 2rem;
-    }
-    
-    .form-group {
-        margin-bottom: 1.25rem;
-    }
-    
-    .form-group label {
-        display: block;
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #6b7a99;
-        margin-bottom: 0.5rem;
-    }
-    
-    .form-group input, .form-group select {
-        width: 100%;
-        height: 46px;
-        padding: 0 14px;
-        border: 1.5px solid #ede9df;
-        border-radius: 8px;
-        font-family: 'Outfit', sans-serif;
-        font-size: 14px;
-        transition: all 0.2s;
-    }
-    
-    .form-group input:focus, .form-group select:focus {
-        outline: none;
-        border-color: #c9a84c;
-    }
-    
-    .register-btn {
-        width: 100%;
-        height: 48px;
-        background: #0d1b3e;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-family: 'Outfit', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s;
-        margin-top: 1rem;
-    }
-    
-    .register-btn:hover {
-        background: #1e2f5c;
-    }
-    
-    .login-link {
-        text-align: center;
-        margin-top: 1.5rem;
-        font-size: 13px;
-        color: #6b7a99;
-    }
-    
-    .login-link a {
-        color: #c9a84c;
-        text-decoration: none;
-        font-weight: 500;
-    }
-    
-    .toast {
-        position: fixed;
-        bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%) translateY(20px);
-        background: #0d1b3e;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-size: 13px;
-        opacity: 0;
-        transition: all 0.3s;
-        pointer-events: none;
-        z-index: 100;
-    }
-    
-    .toast.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-</style>
+        h1 {
+            color: #0d1b3e;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #0d1b3e;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #1e2f5c;
+        }
+        button:disabled {
+            background: #6b7a99;
+            cursor: not-allowed;
+        }
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .debug-info {
+            background: #f4f4f4;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 12px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="register-container">
-        <div class="register-header">
-            <h1>Create Account</h1>
-            <p>Join Meridian College Portal</p>
+    <div class="container">
+        <h1>Register for Meridian College Portal</h1>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="full_name" id="full_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Student ID *</label>
+                <input type="text" name="student_id" id="student_id" required placeholder="e.g., 2024-00123">
+            </div>
+            
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Role *</label>
+                <select name="role" id="role">
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Department</label>
+                <input type="text" name="department" id="department">
+            </div>
+            
+            <div class="form-group">
+                <label>Year Level (Students only)</label>
+                <select name="year_level" id="year_level">
+                    <option value="">Select Year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Password *</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Confirm Password *</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+        
+        <div class="message" id="message"></div>
+        
+        <div class="login-link">
+            Already have an account? <a href="index.php">Login here</a>
         </div>
         
-        <div class="register-body">
-            <form id="registerForm">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="full_name" required placeholder="e.g., Juan Dela Cruz" />
-                </div>
-                
-                <div class="form-group">
-                    <label>Student ID</label>
-                    <input type="text" name="student_id" required placeholder="e.g., 2024-00123" />
-                    <small style="color: #6b7a99; font-size: 11px;">Format: YYYY-XXXXX (e.g., 2024-00123)</small>
-                </div>
-                
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" name="email" required placeholder="e.g., juan@meridian.edu" />
-                </div>
-                
-                <div class="form-group">
-                    <label>Role</label>
-                    <select name="role" required>
-                        <option value="student">Student</option>
-                        <option value="faculty">Faculty</option>
-                        <option value="admin">Admin</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>Department</label>
-                    <input type="text" name="department" placeholder="e.g., Computer Science" />
-                </div>
-                
-                <div class="form-group">
-                    <label>Year Level (Students only)</label>
-                    <select name="year_level">
-                        <option value="">Select Year</option>
-                        <option value="1">1st Year</option>
-                        <option value="2">2nd Year</option>
-                        <option value="3">3rd Year</option>
-                        <option value="4">4th Year</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password" required placeholder="Create a password" />
-                </div>
-                
-                <div class="form-group">
-                    <label>Confirm Password</label>
-                    <input type="password" name="confirm_password" required placeholder="Confirm your password" />
-                </div>
-                
-                <button type="submit" class="register-btn">Register & Generate QR Code</button>
-            </form>
-            
-            <div class="login-link">
-                Already have an account? <a href="index.php">Login here</a>
-            </div>
+        <div class="debug-info" id="debugInfo">
+            <strong>Debug Info:</strong>
+            <pre id="debugContent"></pre>
         </div>
     </div>
     
-    <div class="toast" id="toast"></div>
-    
     <script>
-        function showToast(msg, isError = false) {
-            const t = document.getElementById('toast');
-            t.textContent = msg;
-            t.style.background = isError ? '#c0392b' : '#0d1b3e';
-            t.classList.add('show');
+        // Show/hide year level based on role
+        document.getElementById('role').addEventListener('change', function() {
+            const yearLevelGroup = document.getElementById('year_level').parentElement;
+            if (this.value === 'student') {
+                yearLevelGroup.style.display = 'block';
+            } else {
+                yearLevelGroup.style.display = 'none';
+                document.getElementById('year_level').value = '';
+            }
+        });
+        
+        function showMessage(msg, type) {
+            const msgDiv = document.getElementById('message');
+            msgDiv.textContent = msg;
+            msgDiv.className = 'message ' + type;
+            msgDiv.style.display = 'block';
+            
             setTimeout(() => {
-                t.classList.remove('show');
-                t.style.background = '#0d1b3e';
-            }, 3000);
+                msgDiv.style.display = 'none';
+            }, 5000);
         }
         
         document.getElementById('registerForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const formData = new FormData(e.target);
-            const password = formData.get('password');
-            const confirmPassword = formData.get('confirm_password');
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
             
             if (password !== confirmPassword) {
-                showToast('Passwords do not match!', true);
+                showMessage('Passwords do not match!', 'error');
                 return;
             }
             
-            const btn = e.target.querySelector('.register-btn');
+            // Collect form data
+            const formData = new FormData(e.target);
+            
+            // Convert to URLSearchParams for proper encoding
+            const params = new URLSearchParams();
+            for (let pair of formData.entries()) {
+                if (pair[1]) { // Only add if value is not empty
+                    params.append(pair[0], pair[1]);
+                }
+            }
+            
+            const btn = document.querySelector('button');
             btn.disabled = true;
             btn.textContent = 'Registering...';
             
+            // Show debug info
+            const debugDiv = document.getElementById('debugInfo');
+            const debugContent = document.getElementById('debugContent');
+            debugContent.textContent = 'Sending data: ' + params.toString();
+            debugDiv.style.display = 'block';
+            
             try {
-                const response = await fetch('backend/api.php?action=register', {
+                const url = 'backend/api.php?action=register';
+                console.log('Sending to:', url);
+                console.log('Data:', params.toString());
+                
+                const response = await fetch(url, {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: params.toString()
                 });
                 
-                const data = await response.json();
+                const responseText = await response.text();
+                console.log('Raw response:', responseText);
+                
+                let data;
+                try {
+                    data = JSON.parse(responseText);
+                } catch (e) {
+                    debugContent.textContent += '\n\nError parsing JSON: ' + e.message;
+                    debugContent.textContent += '\nRaw response: ' + responseText;
+                    showMessage('Server returned invalid response. Check debug info.', 'error');
+                    btn.disabled = false;
+                    btn.textContent = 'Register';
+                    return;
+                }
+                
+                debugContent.textContent += '\n\nResponse: ' + JSON.stringify(data, null, 2);
                 
                 if (data.success) {
-                    showToast('Registration successful! Redirecting to login...');
+                    showMessage('Registration successful! Redirecting to login...', 'success');
                     setTimeout(() => {
                         window.location.href = 'index.php';
                     }, 2000);
                 } else {
-                    showToast(data.message || 'Registration failed', true);
+                    showMessage(data.message || 'Registration failed', 'error');
                     btn.disabled = false;
-                    btn.textContent = 'Register & Generate QR Code';
+                    btn.textContent = 'Register';
                 }
             } catch (error) {
-                showToast('An error occurred. Please try again.', true);
+                console.error('Error:', error);
+                debugContent.textContent += '\n\nError: ' + error.message;
+                showMessage('Error: ' + error.message + '. Check console and debug info.', 'error');
                 btn.disabled = false;
-                btn.textContent = 'Register & Generate QR Code';
+                btn.textContent = 'Register';
             }
         });
+        
+        // Trigger role change on load
+        document.getElementById('role').dispatchEvent(new Event('change'));
     </script>
 </body>
 </html>

@@ -27,7 +27,7 @@ if (isset($_SESSION['user_id'])) {
         </svg>
       </div>
     </div>
-    <div class="school-name">Meridian<br/>College</div>
+    <div class="school-name">Prince<br/>College</div>
     <div class="school-tagline">Est. 1968 · Excellence in Education</div>
     <p class="portal-desc">Access your academic records, course enrollments, grades, library resources, and campus services — all in one secure portal.</p>
   </div>

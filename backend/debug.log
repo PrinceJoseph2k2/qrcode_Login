@@ -1,0 +1,156 @@
+2026-04-28 07:37:11 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gaga-a","student_id":"213","email":"prince@gmail.com","role":"student","department":"Information Technology","year_level":"1","password":"123","confirm_password":"123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gaga-a&student_id=213&email=prince%40gmail.com&role=student&department=Information+Technology&year_level=1&password=123&confirm_password=123
+
+2026-04-28 07:37:27 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Information Technology","year_level":"1","password":"123","confirm_password":"123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Information+Technology&year_level=1&password=123&confirm_password=123
+
+2026-04-28 07:37:29 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Information Technology","year_level":"1","password":"123","confirm_password":"123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Information+Technology&year_level=1&password=123&confirm_password=123
+
+2026-04-28 07:37:45 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"123","confirm_password":"123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=123&confirm_password=123
+
+2026-04-28 07:37:47 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"123","confirm_password":"123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=123&confirm_password=123
+
+2026-04-28 07:37:56 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+2026-04-28 07:37:58 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+2026-04-28 07:37:58 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+2026-04-28 07:38:48 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+2026-04-28 07:38:48 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+2026-04-28 07:38:54 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+2026-04-28 07:39:09 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:39:10 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:39:11 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00932","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00932&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:39:32 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00931","email":"prince123@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00931&email=prince123%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:39:51 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Joseph B. Gagaa","student_id":"2023-00931","email":"prince12@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"password123","confirm_password":"password123"}
+RAW INPUT: full_name=Prince+Joseph+B.+Gagaa&student_id=2023-00931&email=prince12%40gmail.com&role=student&department=Computer+Science&year_level=1&password=password123&confirm_password=password123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:40:19 - REQUEST RECEIVED
+GET params: {"action":"login"}
+POST params: {"student_id":"2023-00932","password":"password123","role":"student","remember":"0"}
+RAW INPUT: student_id=2023-00932&password=password123&role=student&remember=0
+
+Action detected: 'login'
+Routing to login
+2026-04-28 07:40:21 - REQUEST RECEIVED
+GET params: {"action":"login"}
+POST params: {"student_id":"2023-00932","password":"password123","role":"student","remember":"0"}
+RAW INPUT: student_id=2023-00932&password=password123&role=student&remember=0
+
+Action detected: 'login'
+Routing to login
+2026-04-28 07:40:23 - REQUEST RECEIVED
+GET params: {"action":"login"}
+POST params: {"student_id":"2023-00932","password":"password123","role":"student","remember":"0"}
+RAW INPUT: student_id=2023-00932&password=password123&role=student&remember=0
+
+Action detected: 'login'
+Routing to login
+2026-04-28 07:40:55 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Gagaa","student_id":"2023-00931","email":"prince19@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"prince123","confirm_password":"prince123"}
+RAW INPUT: full_name=Prince+Gagaa&student_id=2023-00931&email=prince19%40gmail.com&role=student&department=Computer+Science&year_level=1&password=prince123&confirm_password=prince123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:41:05 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Gagaa","student_id":"2023-00930","email":"prince19@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"prince123","confirm_password":"prince123"}
+RAW INPUT: full_name=Prince+Gagaa&student_id=2023-00930&email=prince19%40gmail.com&role=student&department=Computer+Science&year_level=1&password=prince123&confirm_password=prince123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:41:27 - REQUEST RECEIVED
+GET params: {"action":"login"}
+POST params: {"student_id":"2023-00930","password":"prince123","role":"student","remember":"0"}
+RAW INPUT: student_id=2023-00930&password=prince123&role=student&remember=0
+
+Action detected: 'login'
+Routing to login
+2026-04-28 07:41:49 - REQUEST RECEIVED
+GET params: {"action":"register"}
+POST params: {"full_name":"Prince Gagaa","student_id":"2023-00999","email":"prince2k2@gmail.com","role":"student","department":"Computer Science","year_level":"1","password":"prince123","confirm_password":"prince123"}
+RAW INPUT: full_name=Prince+Gagaa&student_id=2023-00999&email=prince2k2%40gmail.com&role=student&department=Computer+Science&year_level=1&password=prince123&confirm_password=prince123
+
+Action detected: 'register'
+Routing to register
+2026-04-28 07:42:04 - REQUEST RECEIVED
+GET params: {"action":"login"}
+POST params: {"student_id":"2023-00999","password":"prince123","role":"student","remember":"1"}
+RAW INPUT: student_id=2023-00999&password=prince123&role=student&remember=1
+
+Action detected: 'login'
+Routing to login
+2026-04-28 07:42:05 - REQUEST RECEIVED
+GET params: {"action":"login"}
+POST params: {"student_id":"2023-00999","password":"prince123","role":"student","remember":"1"}
+RAW INPUT: student_id=2023-00999&password=prince123&role=student&remember=1
+
+Action detected: 'login'
+Routing to login

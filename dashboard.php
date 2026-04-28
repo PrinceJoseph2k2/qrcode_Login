@@ -41,7 +41,7 @@ $studentId = $_SESSION['student_id'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Meridian College Portal</title>
+    <title>Dashboard - Prince College Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -122,7 +122,7 @@ $studentId = $_SESSION['student_id'];
 </head>
 <body>
     <div class="dashboard-header">
-        <h1>Meridian College Portal</h1>
+        <h1>Prince College Portal</h1>
         <div class="user-info">
             <span>Welcome, <?php echo htmlspecialchars($userName); ?> (<?php echo htmlspecialchars($userRole); ?>)</span>
             <a href="logout.php" class="logout-btn">Logout</a>
