@@ -290,11 +290,35 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .login-btn:hover { background: var(--navy-light); }
   .login-btn:active { transform: scale(0.99); }
   .login-btn.loading { opacity: 0.7; pointer-events: none; }
+
+  .register-btn {
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+  .register-btn:hover {
+    background: var(--navy);
+    color: var(--white);
+  }
 
   .divider {
     display: flex;
@@ -321,17 +345,8 @@
     gap: 10px;
     transition: border-color 0.2s, background 0.2s;
     font-weight: 400;
-    margin-bottom: 2rem;
   }
   .sso-btn:hover { border-color: var(--navy); background: var(--cream); }
-
-  .help-text {
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-muted);
-  }
-  .help-link { color: var(--navy); font-weight: 500; text-decoration: none; }
-  .help-link:hover { color: var(--gold); }
 
   .toast {
     position: fixed;
@@ -373,7 +388,7 @@
         </svg>
       </div>
     </div>
-    <div class="school-name">Meridian<br/>College</div>
+    <div class="school-name">Prince<br/>College</div>
     <div class="school-tagline">Est. 1968 · Excellence in Education</div>
     <p class="portal-desc">Access your academic records, course enrollments, grades, library resources, and campus services — all in one secure portal.</p>
   </div>
@@ -436,6 +451,17 @@
       </button>
     </form>
 
+    <!-- NEW REGISTER BUTTON -->
+    <button class="register-btn" onclick="window.location.href='register.php'">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+        <line x1="12" y1="11" x2="12" y2="3"/>
+        <line x1="15" y1="9" x2="9" y2="9"/>
+      </svg>
+      Create New Account
+    </button>
+
     <div class="divider">
       <div class="divider-line"></div>
       <span class="divider-text">or continue with</span>
@@ -451,10 +477,6 @@
       </svg>
       Sign in with Microsoft 365
     </button>
-
-    <p class="help-text">
-      New student? <a href="register-standalone.html" class="help-link">Activate account</a>
-    </p>
   </div>
 </div>
 
@@ -543,7 +565,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     try {
       data = JSON.parse(responseText);
     } catch (e) {
-      showToast('Server error. Please try again.', 'error');
+      showToast('Server error. Please try again.');
       btn.classList.remove('loading');
       btn.innerHTML = originalContent;
       return;
@@ -552,7 +574,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     if (data.success) {
       showToast('Login successful! Redirecting...');
       setTimeout(() => {
-        window.location.href = data.redirect || 'dashboard-standalone.php';
+        window.location.href = data.redirect || 'dashboard.php';
       }, 1000);
     } else {
       showToast(data.message || 'Login failed');

@@ -106,9 +106,9 @@ if (isset($_SESSION['user_id'])) {
       Sign in with Microsoft 365
     </button>
 
-    <p class="help-text">
-      New student? <a href="#" class="help-link" onclick="showToast('Contact the Registrar\'s Office to activate your account.'); return false;">Activate account</a>
-    </p>
+  <p class="help-text">
+  New student? <a href="register.php" class="help-link">Create an account</a>
+</p>
   </div>
 </div>
 
