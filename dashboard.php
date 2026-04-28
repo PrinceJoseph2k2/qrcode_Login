@@ -153,3 +153,13 @@ $studentId = $_SESSION['student_id'];
     </div>
 </body>
 </html>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>📱 My QR Code</h3>
+        <p style="margin-top: 0.5rem;">
+            <a href="my-qrcode.php" style="color: #c9a84c; text-decoration: none;">View/Download QR Code</a>
+        </p>
+    </div>
+    <!-- Other stat cards -->
+</div>
